@@ -1,0 +1,17 @@
+@charset "UTF-8";
+body{padding: 0; margin: 0;
+    background: #0c0b4c;
+}
+
+
+
+.container{
+    width: 1000px; height: 1000px;
+    overflow: hidden;
+    background: url(img/bg.png);
+    margin: 100px auto;
+}
+
+.container .bg img{transform: scale(1.2);}
+.container .one1 img{ transform: scale(1.2);}
+.container .one5 img{ transform: scale(1.2);}
