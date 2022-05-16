@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+        <img src="img/bg.jpg" alt="bg" id="bg">
+        <img src="img/moon.png" alt="moon" id="moon">
+        <img src="img/mountain.png" alt="mountain" id="mountain">
+        <img src="img/road.png" alt="road" id="road">
+        <h2 id="text">Moon Light</h2>
+    </section>
+    <section class="content">
+        <h3>parallax Background Scrolling</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa reiciendis, officia rerum similique nihil voluptas ea voluptatem laudantium, odio, vitae exercitationem impedit sint possimus facere ullam ipsum esse? Provident ab soluta eligendi repellendus assumenda, qui cum rerum porro iusto rem dolores delectus at vero quasi quos officia consequuntur officiis ipsa voluptas commodi fugit. Et recusandae nesciunt quaerat mollitia voluptas. Perferendis ipsum eum nihil consequuntur deserunt dolor quasi facilis minus cupiditate dolore repudiandae cum numquam ipsa voluptas repellat, dolorem quod pariatur dolorum odio eaque est vitae mollitia maxime in? Dolores mollitia consequuntur dicta neque soluta voluptatum magnam? Neque cum quod dignissimos perspiciatis, minima, doloribus cupiditate quia fugit, deleniti laudantium suscipit. Laudantium error est facilis dolorem unde debitis voluptas iure. Placeat veniam a nisi ratione quaerat id officia, repellendus beatae. At doloremque earum id saepe aut. Quasi voluptate unde molestias voluptatibus nobis laudantium, amet placeat in mollitia iure minus delectus hic similique quo qui! Possimus dolorem ea sed explicabo maiores totam ipsam nesciunt earum, magni, illo in omnis commodi quis recusandae officia aut natus? Id molestias earum, quaerat odit recusandae nisi sequi accusamus blanditiis nemo quo, tenetur vel dicta quam corrupti consequatur suscipit aliquam nihil vitae dignissimos eaque expedita perferendis? Omnis, nulla.</p>
+    </section>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script>
+        var $window = $(window);
+        var bg = $('#bg');
+        var moon = $('#moon');
+        var mountain = $('#mountain');
+        var road = $('#road');
+        var text = $('#text');
+
+        //window.scroll(); 
+        //window의 scroll를 움직일때 마다 어떤일이 일어난다
+        $window.scroll(function(){
+            var value = $(this).scrollTop(); //$(this)는 window
+            console.log(value);
+
+            bg.css({top:value * 0.2 + "px"});
+            moon.css({left:-value * 0.5 + "px", top:value * 0.4 + "px", opacity : 1 - (value * 0.002)});
+            mountain.css({top : -value * 0.2 + "px"})
+            road.css({top:value * 0.15 + "px"})
+            text.css({top:value + "px"})
+        }); 
+
+    </script>
+</body>
+</html>
