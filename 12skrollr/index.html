@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="text">0</div>
+    <div class="bg" 
+    data-500="background-color:rgb(122,188,35);" 
+    data-1000="background-color:rgb(50,50,50);"></div>
+
+    <section class="slide01 slide"
+    data-0="top:0%"
+    data-500="top:-100%"
+    >
+    <div class="slide_content">
+        <h2>Lorem ipsum dolor sit amet.</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt rem ex blanditiis at culpa! Recusandae.</p>
+    </div>
+    </section>
+
+    <section class="slide02 slide"  
+        data-500="transform:translateX(100%)"
+        data-1000="transform:translateX(0%); opacity:1"
+        data-2000="opacity:0"
+        >
+    <div class="slide_content">
+        <h2>Narrow the margins</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem recusandae ad veritatis vel animi doloremque laboriosam expedita repellat blanditiis eligendi.</p>
+    </div>
+    </section>
+
+    <section class="slide03 slide"
+    data-1000="top:-100%; opacity:0"
+    data-2000="top:0%; opacity:1"
+    >
+    <div class="slide_content">
+        <h2>제목3 입니다.</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, minus omnis blanditiis iste deserunt nostrum voluptatibus tempora dignissimos perferendis dolorem!</p>
+    </div>
+    </section>
+
+    <section class="slide04 slide"
+    data-2000="opacity:0"
+    data-3000="opacity:1"
+    >
+    <div class="slide_content"
+    data-2000="top:200px"
+    data-3000="top:0px">
+        <h3>제목4 입니다.</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic libero maiores unde placeat quod sapiente reprehenderit rem assumenda debitis delectus?</p>
+    </div>
+    </section>
+
+   <section class="slide05 slide"
+   data-2500="top:100%; transform:rotate(0deg) scale(0)"
+   data-4000="top:-100%; transform:rotate(700deg) scale(1)"
+    >
+    <img src="img/shuttle.png" alt="shuttle">
+    </section>
+ 
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js" ></script>
+    <script src="skrollr.min.js"></script>
+    <script>
+        var s = skrollr.init();
+
+
+
+        $(window).scroll(function(){
+            var wScroll = parseInt($(this).scrollTop()); //parseInt():정수값으로 변환
+          
+            $('.text').text(wScroll)
+        });
+    </script>
+</body>
+</html>
