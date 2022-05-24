@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="text">0</div>
+    <div class="bg" data-0="background-color: rgb(255,255,255);" data-500="background-color: rgb(255,255,255);"></div>
+
+    <section class="slide01 slide"
+     data-0="top:0%" 
+     data-500="top:-100%">
+        <div class="slide_content">
+
+            <div class="logo">
+                <img src="img/logo01.png" alt="logo">
+            </div>
+        
+        </div>
+    </section>
+
+    <section class="slide02 slide"
+    data-500="transform: translateX(-100%)"
+    data-1000="transform: translateX(0%)">
+        <div class="slide_content">
+            <div class="box">
+                
+            </div>
+            <img src="img/ice2.png" alt="아이스크림">
+            <img src="img/ice1.png" alt="아이스크림">
+        </div>
+    
+
+    </section> 
+    
+
+    
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="skrollr.min.js"></script>
+    <script>
+        var s = skrollr.init();
+
+
+
+        $(window).scroll(function () {
+            var wScroll = parseInt($(this).scrollTop()); //parseInt():정수값으로 변환
+
+            $('.text').text(wScroll)
+        });
+    </script>
+</body>
+
+</html>

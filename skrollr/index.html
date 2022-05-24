@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="text">0</div>
+    <div class="bg" data-0="background-color: rgb(255,255,255);" data-500="background-color: rgb(255,255,255);"></div>
+
+    <section class="slide01 slide" 
+    data-0="top:0%" data-500="top:-100%">
+        <div class="slide_content">
+
+            <div class="logo">
+                <img src="img/logo01.png" alt="logo">
+            </div>
+        
+        </div>
+    </section>
+
+    <section class="slide02 slide" data-0="transform:translateX(100%)" data-1000="transform:translateX(0%); opacity:1"
+        data-2000="opacity:0">
+        <div class="slide_content">
+            <div class="ice">
+                <img src="img/ice1.png" alt="체리쥬빌레">
+            </div>
+
+            <h3>TOP 5. 체리쥬빌레</h3>
+            <p>많이 달지 않고 상큼해서 전 연령층이 좋아하는 맛. 실제 체리 과육을 사용한 토핑의 식감은 호불호가 갈림</p>
+        </div>
+
+    </section>
+
+    <section class="slide03 slide" data-1000="top:-100%; opacity:0" data-2000="top:0%; opacity:1">
+        <div class="slide_content">
+            <div class="ice">
+                <img src="img/ice5.png" alt="슈팅스타">
+            </div>
+
+            <h3>TOP 4. 슈팅스타</h3>
+            <p>블루베리와 라벤더 향 아이스크림에 톡톡 터지는 팝핑 캔디가 인상적인 맛. 체리 시럽으로 마무리도 상큼함.</p>
+        </div>
+
+    </section>
+
+    <section class="slide04 slide" data-2000="opacity:0" data-3000="opacity:1">
+        <div class="slide_content" data-2000="transform:translateX(200%)" data-2500="opacity:0"
+            data-3000="transform:translateX(0%); opacity:1" data-3500="opacity:0">
+            <div class="ice">
+                <img src="img/ice2.png" alt="민트초콜릿칩">
+            </div>
+
+            <h3>TOP 3. 민트 초콜릿 칩</h3>
+            <p>가장 호볼호가 갈리는 논란의 제품 놀랍게도 누적 판매량 3위임. 민초단의 규모가 상상 외로 크다는 것을 알 수 있음</p>
+        </div>
+
+    </section>
+
+
+    <section class="slide05 slide" data-3500="top:0%; opacity:0;" data-4000="opacity:1;" data-4500="top:-100%;">
+        <div class="slide_content">
+            <div class="ice">
+                <img src="img/ice4.png" alt="아몬드봉봉">
+            </div>
+
+            <h3>TOP 2. 아몬드 봉봉</h3>
+            <p>부드러운 바닐라 아이스크림과 초코 코팅 아몬드의 조화로운 맛과 식감. 고소하고 달달해서 전 연령층이 좋아함</p>
+        </div>
+
+    </section>
+
+    <section class="slide06 slide" data-4500="top:-100%;" data-5000="top:0%;">
+        <div class="slide_content">
+            <div class="obj" data-4500="top:110%; scale(0);" data-6000="top:-110%;scale(1);">
+                <img src="img/object01.png" alt="풍선">
+            </div><!-- obj -->
+            <div class="ice">
+                <img src="img/ice3.png" alt="엄마는 외계인">
+            </div>
+
+            <h3 class="best0">TOP 1. 엄마는 외계인</h3>
+            <p class="best1">부동의 인기 1위 제품으로 미국 내 이름은 'Puss in Boots(장화 신은 고양이)'. 초코볼을 행성에 비유해 이름을 바꿈</p>
+        </div>
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="skrollr.min.js"></script>
+    <script>
+        var s = skrollr.init();
+
+
+
+        $(window).scroll(function () {
+            var wScroll = parseInt($(this).scrollTop()); //parseInt():정수값으로 변환
+
+            $('.text').text(wScroll)
+        });
+    </script>
+</body>
+
+</html>
