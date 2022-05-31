@@ -1,0 +1,117 @@
+<!DOCTYPE html> <!-- html5버전으로 문서가 만들어진다 -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- equiv = equivalent(동등한)
+    호환을 어떻게 할것인가의 내용, ie의 가장 최신버전으로 보게한다.
+    만약에 크롬이 깔여있다면 크롬브라우저가 웹페이즈를 해석해서 보여주라
+    는 의미(크롬엔진을 사용하라는 의미) 
+    ie로 열었다 할지라도 껍데기는 ie이고 알맹이는 chrome이라는 의미
+    만약에 chrome이 깔려있지 않다면 ie의 최신버전(최상위)버전으로 해석 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 뷰포터의 사이즈를 디바이스의 사이즈로 맞추고, 
+    기본적인 확대정도를 1(100%), 확대또는 축소되지 않은 상태로 출발한다. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="GreenArt">
+    <meta name="description" content="사이트연습하기">
+    <meta name="keywords" content="웹퍼블리셔, 접근성, html, 사이트">
+    <title>웹사이트</title>
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://suuneee.dothome.co.kr/web/proweb/index.html">
+    <meta property="og:title" content="멋진사이트만들기">
+    <meta property="og:description" content="기본사이트만들기 연습하기">
+    <meta property="og:image" content="images/portfolio-thumb-1.jpg">
+    <!-- og는 open graph의 약자, 
+     오픈그래프의 속성을 이용해서 더 많은 정보를 입력할수 있다.
+     og:type  ==>페이지의 유형
+     og:url   ==>페이지의 주소(URL)
+     og:title ==>페이지의 이름(제목)
+     og:description ==>페이지의 간단한 설명
+     og:image ==> 페이지의 대표 이미지 주소 -->
+
+    <!-- 트위터 카드(Twitter Card)
+     웹페이지가 쇼설 미디어(트위터)로 공유할때 우선적으로 활용되는 정보 -->
+    <!-- <meta property="twitter:card" content="summary">
+     <meta property="twitter:site" content="기본사이트">
+     <meta property="twitter:title" content="기본사이트">
+     <meta property="twitter:descritption" content="기본사이트 만들기">
+     <meta property="twitter:image" content="images/portfolio-thumb-1.jpg">
+     <meta property="twitter:url" content="http://suuneee.dothome.co.kr/web/proweb/index.html">
+      -->
+    <!-- twitter:card ==> 페이지의 유형(summary, player..)
+     twitter:site ==> 속한 사이트의 이름 -->
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+
+    <!-- style -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/reset.css"> -->
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+</head>
+
+<body>
+    <header>
+        <div class="container clearfix">
+            <h1 class="logo">
+                <a href="#">Logo</a>
+            </h1>
+            <nav>
+                <ul class="clearfix">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="banner">
+        <div class="banner_list">
+            <div class="slide slide1">
+                <h2 class="main_tt fancy-box red">
+                    project title</h2>
+                <div class="slide_contents">
+                    <p>This is a small description. Keep it simple and to the point.</p>
+                    <a href="#" class="btn">SEE DETAILS</a>
+                </div>
+            </div><!-- //slide1 -->
+            <div class="slide slide2">
+                <h2 class="main_tt fancy-box red">
+                    project title</h2>
+                <div class="slide_contents">
+                    <p>This is a small description. Keep it simple and to the point.</p>
+                    <a href="#" class="btn">SEE DETAILS</a>
+                </div>
+            </div><!-- //slide2 -->
+            <div class="slide slide3">
+                <h2 class="main_tt fancy-box red">
+                    project title</h2>
+                <div class="slide_contents">
+                    <p>This is a small description. Keep it simple and to the point.</p>
+                    <a href="#" class="btn">SEE DETAILS</a>
+                </div>
+            </div><!-- //slide3 -->
+        </div><!-- //banner_list -->
+    </div><!-- //banner -->
+
+
+
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+        $('.banner_list').slick({
+
+        });
+    </script>
+</body>
+
+</html>
